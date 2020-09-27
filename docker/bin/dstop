@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CONTAINER_COUNT=$(docker ps -a -q | wc -l)
+
+if [ "$CONTAINER_COUNT" != "0" ]; then
+  docker ps -a -q | xargs docker stop | xargs docker rm
+fi

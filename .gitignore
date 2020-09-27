@@ -1,0 +1,15 @@
+# Configuration
+.envrc
+s3fs-bucket.txt
+pki-nifi.pem
+pki-nifi.pem.pub
+
+# Logs
+ylog-*.log
+
+# Terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+tfplan

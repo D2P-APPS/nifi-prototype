@@ -1,0 +1,14 @@
+data "aws_vpc" "default_vpc" {
+  tags = { "Default" = "true" }
+}
+
+data "aws_subnet" "default_us_east_1a" {
+  filter {
+    name   = "vpc-id"
+    values = ["${data.aws_vpc.default_vpc.id}"]
+  }
+  filter {
+    name   = "availability-zone"
+    values = ["us-east-1a"]
+  }
+}

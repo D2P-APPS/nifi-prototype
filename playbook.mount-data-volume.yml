@@ -1,0 +1,18 @@
+- name: Create filesystem on EBS volume
+  filesystem:
+    dev: /dev/nvme1n1
+    fstype: xfs
+
+- name: Create mount directory.
+  file:
+    path: /data/1
+    state: directory
+    owner: "{{ssh_user}}"
+    group: "{{ssh_user}}"
+
+- name: Mount the EBS volume
+  mount:
+    fstype: xfs
+    path: /data/1
+    src: /dev/nvme1n1
+    state: mounted

@@ -1,55 +1,13 @@
-# Apache NiFi Prototype
+# Apache NiFi Notes
 
-Using Apache NiFi to perform OCR on PDF files.
-
-NiFi is a system of enhancing data through filtering with the help of point source security. It was developed by the National Security Agency to enhance and boost the underlying capacities of the host system NiFi is operating on. NiFi’s main purpose is to automate the data flow between two systems.  This facilitates better flow of data between two systems, one of which is creating data while the other is consuming it. NiFi was formerly called Niagarafiles.
+NiFi is a system of enhancing data through filtering with the help of point source security. It was developed by the National Security Agency to enhance and boost the underlying capacities of the host system NiFi is operating on. NiFi’s main purpose is to automate the data flow between two systems. This facilitates better flow of data between two systems, one of which is creating data while the other is consuming it. NiFi was formerly called Niagarafiles.
 
 NiFi is built on the philosophy of ensured and guaranteed deliveries. It works by effective load spreading and providing high transaction rates. It supports buffering and can queue the data until the data reaches its intended destination. It also supports prioritized queuing in cases when there are exceptions that the largest, newest or some other data should be processed first. The main goal of NiFi is thus to enhance the data flow between the two underlying systems on which it is running.
-
-## Features
-
-* Guaranteed delivery
-* Data buffering with back pressure and pressure release
-* Prioritizing queuing
-* Flow specifc QoS
-* Lineage and Provenance
-* Fine-grained history
-* Extensable
-* Visual command and control
-* Clustering
-
-## Abstractions
-
-* FlowFile - an object moving through the system consisting of a byte array and a key/value map.
-* FlowFile Processor - software that does a unit of work.
-* Connection - linkage between processors.
-* Flow Controller - broker facilitating exchange of FlowFiles between processors.
-* Process Group - set of processors and connections which has input and output ports.
 
 ## Questions
 
 * What is the NiFi CA server?
 * How to start Zookeeper with Terraform?
-* What is Ranger authentication?
-* How are processes checkpointed?
-* How are flow versions controlled?
-* On the editing window, can there by read-only users?
-
-## Concepts
-
-* Flow Development Life Cycle - FDLC
-
-## Metrics
-
-* Is flow running correctly?
-* Number of flow files?
-* Size of flow size?
-* Size of queues?
-* Memory utilization?
-* CPU utilization?
-* Disk utilization?
-* Error counts?
-
 
 ## Links
 
@@ -119,39 +77,18 @@ NiFi is built on the philosophy of ensured and guaranteed deliveries. It works b
 * Security
     * https://www.rynehanson.com/infosec/nifi-vulnerable-by-design/
     * https://laconicwolf.com/2018/11/08/examining-code-execution-features-in-apache-nifi/
-    * https://medium.com/apache-nifi-security/apache-nifi-sensitive-parameters-vulnerability-f10016aace22
 * Terraform
     * https://github.com/chadgeary/nifi
     * https://github.com/Glympse/terraform-provider-nifi
     * https://pierrevillard.com/2019/11/22/secured-nifi-cluster-with-terraform-on-the-google-cloud-platform/
     * https://github.com/Nordstrom/nifi_terraform_generator
-* Tesseract
-    * https://github.com/tspannhw/nifi-tesseract-python
 * Tips
     * https://pierrevillard.com/2018/07/02/nifi-1-7-terminate-threads/
 * TLS
     * https://www.thedatanewbie.com/2019/03/how-to-configure-tls-okta.html
 * Training
     * https://www.gologica.com/course/apache-nifi-training/
-    * Silver Cloud Computing
-        * https://www.youtube.com/watch?v=gqV_63a0ABo - 01 - Overview
-        * https://www.youtube.com/watch?v=DDd6KayUHt8 - 02 - Installation and Configuration
-        * https://www.youtube.com/watch?v=K8xz5YtlCo0 - 03 - GUI Operations
-        * https://www.youtube.com/watch?v=ou2JWhPvWps - 04 - Create a Data Flow, Part 1
-        * https://www.youtube.com/watch?v=WZ1kVIa22f8 - 05 - Create a Data Flow, Part 2
-        * https://www.youtube.com/watch?v=7DM1ZuWmcAQ - 07 - Securing NiFi
-        * https://www.youtube.com/watch?v=rvKTnRiEB9Q - 09 - Clustering NiFi (old technique)
-        * https://www.youtube.com/watch?v=QRzVr82V_Is - 10 - Creating Custom Processor
-        * https://www.youtube.com/watch?v=5Jj0gSF3Mx0 - Recipe 02 - Memory Settings
-        * https://www.youtube.com/watch?v=YzSr2vsN0PE - Recipe 03 - Clean Up Directories
-        * https://www.youtube.com/watch?v=j5t_ydLgVXI - Recipe 08 - Replace NiFi Logo
-        * https://www.youtube.com/watch?v=uwp0UE5e5ew - XML To JSON Parsing
 * Videos
-    * Andrew Lim
-        * https://www.youtube.com/watch?v=X_qhRVChjZY - Getting Start With Apache Registry
-        * https://www.youtube.com/watch?v=DSO12fhnZ90 - Setting Up a Secure NiFi to Integrate with a Secure NiFi Registry
-    * AO DBA
-        * https://www.youtube.com/watch?v=F2lH024LduE - How to Query a FlowFile in Apache NiFi Using QueryRecord
     * https://nifi.apache.org/videos.html
     * https://www.udemy.com/course/apache-nifi-latest-course/
     * https://www.youtube.com/watch?v=fblkgr1PJ0o - Apache NiFi Crash Course
@@ -160,13 +97,7 @@ NiFi is built on the philosophy of ensured and guaranteed deliveries. It works b
     * https://www.youtube.com/watch?v=VVnFt54jUQ8&list=PL55symSEWBbMBSnNW_Aboh2TpYkNIFMgb - Apache NiFi - the complete guide.
     * https://www.youtube.com/watch?v=sQCgtCoZyFQ - OSCON 2015: Enterprise Dataflow with NiFi.
     * https://www.youtube.com/channel/UCBHGHVGIihzmuOM86D8IfHQ - Steven Koon Channel
-    * https://www.youtube.com/watch?v=WX7jrfsWucs - How to ingest files and netflow with NiFi.
-    * https://www.youtube.com/watch?v=QPgIv-OJUuk - shows how to use debug processor.
-    * https://www.youtube.com/watch?v=RjWstt7nRVY - Apache NiFi Anti-patterns, Part 1
-    * https://www.youtube.com/watch?v=v1CoQk730qs - Apache NiFi Anti-patterns, Part 2, Flow Layout
-    * https://www.youtube.com/watch?v=rF7FV8cCYIc - Best practicesf rom Renault
-    * https://www.youtube.com/watch?v=kK7eVppg9Aw - Storing Apache NiFi Versioned Flows In a Git Repository
-    * https://www.youtube.com/watch?v=SZhX_gce63E - Aviation Data Flow
+
 * Documentation
     * https://nifi.apache.org/docs/nifi-docs/
     * https://nifi.apache.org/docs/nifi-registry-docs/
@@ -181,15 +112,3 @@ NiFi is built on the philosophy of ensured and guaranteed deliveries. It works b
 * Pierre Villard - @pvillard31 - member of Apache NiFi PMC
 * Steven Koon - narteck@hotmail.com
 * Yolanda M. Davis - yolanda.m.davis@gmail.com
-
-## Show Outputs
-
-```bash
-terraform show
-```
-
-## List Terraform Files
-
-```bash
-terraform fmt
-```
