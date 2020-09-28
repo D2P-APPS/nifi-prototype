@@ -1,1 +1,5 @@
 conf/*.local
+conf/CN=*.p12
+conf/CN=*.password
+conf/*.pem
+conf/*.key
